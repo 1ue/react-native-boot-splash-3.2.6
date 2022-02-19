@@ -1,14 +1,6 @@
 # 🚀 react-native-bootsplash
 
-<a href="https://github.com/sponsors/zoontek">
-  <img align="right" width="160" alt="This library helped you? Consider sponsoring!" src=".github/funding-octocat.svg">
-</a>
-
 Show a bootsplash during app startup. Hide it when you are ready.
-
-[![npm version](https://badge.fury.io/js/react-native-bootsplash.svg)](https://www.npmjs.org/package/react-native-bootsplash)
-[![npm](https://img.shields.io/npm/dt/react-native-bootsplash.svg)](https://www.npmjs.org/package/react-native-bootsplash)
-[![MIT](https://img.shields.io/dub/l/vibe-d.svg)](https://opensource.org/licenses/MIT)
 <br>
 [![Platform - Android](https://img.shields.io/badge/platform-Android-3ddc84.svg?style=flat&logo=android)](https://www.android.com)
 [![Platform - iOS](https://img.shields.io/badge/platform-iOS-000.svg?style=flat&logo=apple)](https://developer.apple.com/ios)
@@ -19,83 +11,19 @@ Show a bootsplash during app startup. Hide it when you are ready.
 </p>
 
 ## Support
+React Native version 0.63.0+
 
-| version | react-native version |
-| ------- | -------------------- |
-| 3.0.0+  | 0.63.0+              |
-| 2.0.0+  | 0.60.0+              |
-
-For 0.59-, you should use [`jetify -r`](https://github.com/mikehardy/jetifier/blob/master/README.md#to-reverse-jetify--convert-node_modules-dependencies-to-support-libraries)
 
 ## Installation
 
 ```bash
-$ npm install --save react-native-bootsplash
+$ npm install --save yarn add react-native-bootsplash@3.2.6
 # --- or ---
-$ yarn add react-native-bootsplash
+$ yarn add react-native-bootsplash@3.2.6
 ```
 
 Don't forget going into the `ios` directory to execute a `pod install`.
 
-## 🆘 Manual linking
-
-Because this package targets React Native 0.60.0+, you will probably don't need to link it manually. Otherwise if it's not the case, follow this additional instructions:
-
-<details>
-  <summary><b>👀 See manual linking instructions</b></summary>
-
-### iOS
-
-Add this line to your `ios/Podfile` file, then run `pod install`.
-
-```bash
-target 'YourAwesomeProject' do
-  # …
-  pod 'RNBootSplash', :path => '../node_modules/react-native-bootsplash'
-end
-```
-
-### Android
-
-1. Add the following lines to `android/settings.gradle`:
-
-```gradle
-include ':react-native-bootsplash'
-project(':react-native-bootsplash').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-bootsplash/android')
-```
-
-2. Add the implementation line to the dependencies in `android/app/build.gradle`:
-
-```gradle
-dependencies {
-  // ...
-  implementation project(':react-native-bootsplash')
-}
-```
-
-3. Add the import and link the package in `MainApplication.java`:
-
-```java
-import com.zoontek.rnbootsplash.RNBootSplashPackage; // <- add the RNBootSplashPackage import
-
-public class MainApplication extends Application implements ReactApplication {
-
-  // …
-
-  @Override
-  protected List<ReactPackage> getPackages() {
-    @SuppressWarnings("UnnecessaryLocalVariable")
-    List<ReactPackage> packages = new PackageList(this).getPackages();
-    // …
-    packages.add(new RNBootSplashPackage());
-    return packages;
-  }
-
-  // …
-}
-```
-
-</details>
 
 ## Setup
 
